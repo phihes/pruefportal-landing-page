@@ -1,3 +1,7 @@
+# Pruefportal Landing Page
+
+Commit to main to launch action that deploys to github pages at [phihes.github.io](https://phihes.github.io)
+
 # Mainline Astro Template
 
 Mainline is a free template built with shadcn/ui, Tailwind 4 and Astro 5.
