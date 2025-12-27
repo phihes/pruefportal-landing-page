@@ -8,6 +8,7 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://phihes.github.io',
+  base: '/pruefportal-landing-page',
   integrations: [mdx(), sitemap(), react()],
   output: "static",
 
