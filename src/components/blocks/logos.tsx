@@ -1,166 +1,89 @@
-import Marquee from "react-fast-marquee";
+import { Button } from "@/components/ui/button";
+import { DashedLine } from "../dashed-line";
+import {
+  ArrowRight,
+  Github,
+  Globe
+} from "lucide-react";
 
-import { cn } from "@/lib/utils";
-
-type Company = {
-  name: string;
-  logo: string;
-  width: number;
-  height: number;
-  href: string;
-};
 
 export const Logos = () => {
-  const topRowCompanies = [
+  const companies = [
     {
-      name: "Mercury",
-      logo: "/logos/mercury.svg",
-      width: 143,
-      height: 26,
-      href: "https://mercury.com",
+      name: "acatech",
+      href: "https://www.acatech.de",
+    },    
+    {
+      name: "TÜV AI.Lab",
+      href: "https://www.tuev-lab.ai/",
     },
     {
-      name: "Watershed",
-      logo: "/logos/watershed.svg",
-      width: 154,
-      height: 31,
-      href: "https://watershed.com",
+      name: "pwc",
+      href: "https://www.pwc.de/",
     },
     {
-      name: "Retool",
-      logo: "/logos/retool.svg",
-      width: 113,
-      height: 22,
-      href: "https://retool.com",
+      name: "CERTIF.AI",
+      href: "https://www.getcertif.ai/",
+    },    
+    {
+      name: "AIQ",
+      href: "https://aiqualityhub.com/",
     },
     {
-      name: "Descript",
-      logo: "/logos/descript.svg",
-      width: 112,
-      height: 27,
-      href: "https://descript.com",
+      name: "Fraunhofer IAIS",
+      href: "https://www.iais.fraunhofer.de/",
     },
+    {
+      name: "VDE",
+      href: "https://vde.com",
+    }
   ];
 
-  const bottomRowCompanies = [
-    {
-      name: "Perplexity",
-      logo: "/logos/perplexity.svg",
-      width: 141,
-      height: 32,
-      href: "https://perplexity.com",
-    },
-    {
-      name: "Monzo",
-      logo: "/logos/monzo.svg",
-      width: 104,
-      height: 18,
-      href: "https://monzo.com",
-    },
-    {
-      name: "Ramp",
-      logo: "/logos/ramp.svg",
-      width: 105,
-      height: 28,
-      href: "https://ramp.com",
-    },
-    {
-      name: "Raycast",
-      logo: "/logos/raycast.svg",
-      width: 128,
-      height: 33,
-      href: "https://raycast.com",
-    },
-    {
-      name: "Arc",
-      logo: "/logos/arc.svg",
-      width: 90,
-      height: 28,
-      href: "https://arc.com",
-    },
-  ];
-
-  return (
-    <section className="overflow-hidden pb-28 lg:pb-32">
-      <div className="container space-y-10 lg:space-y-16">
-        <div className="text-center">
-          <h2 className="mb-4 text-xl text-balance md:text-2xl lg:text-3xl">
-            Powering the world's best product teams.
-            <br className="max-md:hidden" />
-            <span className="text-muted-foreground">
-              From next-gen startups to established enterprises.
-            </span>
-          </h2>
+return (
+    <section id="standard">
+        <div className="relative flex items-center justify-center">
+          <DashedLine className="text-muted-foreground" />
+        </div>      
+      {/* Images Left - Text Right */}
+      <div className="container flex py-28 lg:py-32 lg:pt-44 flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
+        <div className="flex-1">
+          <img src="/about/standard.png" className="relative aspect-[2.10/2.97] overflow-hidden rounded-xs shadow-2xl shadow-accent-foreground" alt="MISSION KI Qualitätsstandard" />
         </div>
+        <div className="flex-1 text-lg font-medium">
+            <h2 className="mb-6 text-xl text-balance md:text-2xl lg:text-3xl">
+              <span className="">Prüfgrundlage</span><br />
+              <span className="text-muted-foreground">Der MISSION KI Qualitätsstandard: Ein klarer Rahmen für KI-Qualität</span>
+            </h2>
+          <div className="text-muted-foreground max-w-xl space-y-6">
+            <p>Der EU AI Act reguliert Hochrisiko-KI – doch viele KI-Anwendungen liegen unterhalb dieser Schwelle. Trotzdem erwarten Kunden, Partner und Investoren belastbare Nachweise zu Qualität, Sicherheit und Fairness.</p>
+            <p>Um die Wettbewerbsfähigkeit deutscher KI-Entwicklung und -Anwendung zu stärken, hat MISSION KI gemeinsam mit führenden Akteuren aus Forschung, Normung und Prüfwesen einen Qualitätsstandard entwickelt, der KI-Qualität systematisch messbar und nachweisbar macht. Das Verfahren ermöglicht Unternehmen, Qualitätsversprechen strukturiert zu belegen – für schnellere Vertrauensbildung bei Kunden und Investoren, effizientere Beschaffung und gezielte Vorbereitung auf regulatorische Anforderungen wie den EU AI Act.</p>
+            <p className="text-accent-foreground">Autoren:</p>
+          </div>
+          <div className="flex flex-wrap mt-4">
+              {companies.map((company, index) => (
 
-        <div className="flex w-full flex-col items-center gap-8">
-          {/* Top row - 4 logos */}
-          <LogoRow companies={topRowCompanies} gridClassName="grid-cols-4" />
-
-          {/* Bottom row - 5 logos */}
-          <LogoRow
-            companies={bottomRowCompanies}
-            gridClassName="grid-cols-5"
-            direction="right"
-          />
+                  <a href={company.href} target="_blank" key={index}
+                    className="px-2 py-1 mr-4 mt-4 border-1 border-accent-foreground rounded-sm text-sm text-accent-foreground transition-opacity hover:opacity-100 opacity-60 font-bold shadow-xs hover:shadow-none"
+                  >{company.name}</a>
+              ))}
+          </div>
+          <div className="text-muted-foreground max-w-xl space-y-6 mt-6">
+           <p className="text-accent-foreground">Mehr über den Standard:</p>
+          </div>          
+          <div className="flex mt-4 gap-2">
+            <a
+              href="https://mission-ki.de/de/pruefstandards"
+              className="max-w-56 truncate text-start md:max-w-none text-sm text-accent-foreground underline"
+              target="_blank"
+            ><Globe className="stroke-2" /></a>
+            <a
+              href="https://github.com/mission-ki/standard"
+              className="max-w-56 truncate text-start md:max-w-none text-sm text-accent-foreground underline"
+              target="_blank"
+            ><Github className="stroke-2" /></a>            
+          </div>          
         </div>
-      </div>
+      </div>        
     </section>
   );
-};
-
-type LogoRowProps = {
-  companies: Company[];
-  gridClassName: string;
-  direction?: "left" | "right";
-};
-
-const LogoRow = ({ companies, gridClassName, direction }: LogoRowProps) => {
-  return (
-    <>
-      {/* Desktop static version */}
-      <div className="hidden md:block">
-        <div
-          className={cn(
-            "grid items-center justify-items-center gap-x-20 lg:gap-x-28",
-            gridClassName,
-          )}
-        >
-          {companies.map((company, index) => (
-            <a href={company.href} target="_blank" key={index}>
-              <img
-                src={company.logo}
-                alt={`${company.name} logo`}
-                width={company.width}
-                height={company.height}
-                className="dark:opacity/100 object-contain opacity-50 transition-opacity hover:opacity-70 dark:invert"
-              />
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {/* Mobile marquee version */}
-      <div className="md:hidden">
-        <Marquee direction={direction} pauseOnHover>
-          {companies.map((company, index) => (
-            <a
-              href={company.href}
-              target="_blank"
-              key={index}
-              className="mx-8 inline-block transition-opacity hover:opacity-70"
-            >
-              <img
-                src={company.logo}
-                alt={`${company.name} logo`}
-                width={company.width}
-                height={company.height}
-                className="object-contain"
-              />
-            </a>
-          ))}
-        </Marquee>
-      </div>
-    </>
-  );
-};
+}

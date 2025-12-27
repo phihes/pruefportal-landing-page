@@ -34,7 +34,7 @@ const ITEMS = [
     ],
   },
   { label: "About Us", href: "/about" },
-  { label: "Pricing", href: "/pricing" },
+  //{ label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
@@ -56,7 +56,7 @@ export const Navbar = () => {
       )}
     >
       <div className="flex items-center justify-between px-6 py-3">
-        <a href="/" className="flex shrink-0 items-center gap-2">
+        {/* <a href="/" className="flex shrink-0 items-center gap-2">
           <img
             src="/logo.svg"
             alt="logo"
@@ -64,6 +64,9 @@ export const Navbar = () => {
             height={18}
             className="dark:invert"
           />
+        </a> */}
+        <a href="/" className="flex shrink-0 items-center gap-2 font-bold font-stretch-semi-condensed text-sm text-primary-foreground">
+          <span>pruefportal.ai</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -116,26 +119,26 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
-          <ThemeToggle />
-          <a href="/login" className="max-lg:hidden">
+          {/* <ThemeToggle /> */}
+          <a href="https://pruefportal.mission-ki.de/users/login" className="max-lg:hidden">
             <Button variant="outline">
-              <span className="relative z-10">Login</span>
+              <span className="relative z-10">Anmelden</span>
             </Button>
           </a>
-          <a
+          {/*<a
             href={GITHUB_URL}
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
             <Github className="size-4" />
             <span className="sr-only">GitHub</span>
-          </a>
+          </a>*/}        
 
           {/* Hamburger Menu Button (Mobile Only) */}
           <button
             className="text-muted-foreground relative flex size-8 lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">Hauptmenü öffnen</span>
             <div className="absolute top-1/2 left-1/2 block w-[18px] -translate-x-1/2 -translate-y-1/2">
               <span
                 aria-hidden="true"

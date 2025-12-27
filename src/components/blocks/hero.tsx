@@ -4,32 +4,38 @@ import {
   ChartNoAxesColumn,
   CircleDot,
   Diamond,
+  Bot,
+  ListChecks,
+  Sparkles,
+  RulerDimensionLine,
+  PocketKnife
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { GITHUB_URL } from "@/consts";
 
 const features = [
   {
-    title: "Tailored workflows",
-    description: "Track progress across custom issue flows for your team.",
-    icon: CircleDot,
-  },
+    title: "Kostenlos und Open Source",
+    description: "Das Prüfportal und der Standard sind kostenlos und als Open Source verfügbar.",
+    icon: Sparkles,
+  },  
   {
-    title: "Cross-team projects",
-    description: "Collaborate across teams and departments.",
+    title: "Einfache, strukturierte Prüfung",
+    description: "Lassen Sie sich durch die Prüfung führen und das Ergebnis automatisch berechnen.",
+    icon: ListChecks,
+  },   
+  {
+    title: "Vielfältig anwendbar",
+    description: "Anwendbar auf verschiedene Arten von Modellen, sowie Hoch- und Niedrigrisiko-KI.",
+    icon: PocketKnife,
+  },  
+  {
+    title: "Kollaborativ",
+    description: "Lassen Sie sich einfach durch weitere Experten bei der Prüfung unterstützen.",
     icon: Blend,
-  },
-  {
-    title: "Milestones",
-    description: "Break projects down into concrete phases.",
-    icon: Diamond,
-  },
-  {
-    title: "Progress insights",
-    description: "Track scope, velocity, and progress over time.",
-    icon: ChartNoAxesColumn,
   },
 ];
 
@@ -39,30 +45,30 @@ export const Hero = () => {
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <h1 className="text-foreground max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Mainline Astro template
+          <h1 className="text-foreground font-extrabold tracking-normal max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
+            Prüfportal für KI <Badge variant="secondary">Beta-Version</Badge>
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Mainline is an open-source website template built with shadcn/ui,
-            Tailwind 4 & Astro 5
+            Prüfen Sie die Qualität Ihres KI-Systems einfach nach dem <a href="https://mission-ki.de/de/pruefstandards" className="" target="_blank">MISSION KI Standard</a>
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
-            <Button asChild>
-              <a href={GITHUB_URL}>Get template</a>
+            <Button asChild
+              className=""
+            >
+              <a href="https://pruefportal.mission-ki.de/users/register"><Bot className="stroke-2 text-primary-foreground" />Jetzt kostenlos prüfen</a>
             </Button>
             <Button
               variant="outline"
-              className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
+              className="from-background h-auto gap-2 bg-linear-to-r to-transparent"
               asChild
             >
               <a
-                href="https://shadcnblocks.com"
+                href="#standard"
                 className="max-w-56 truncate text-start md:max-w-none"
               >
-                Built by shadcnblocks.com
-                <ArrowRight className="stroke-3" />
+                Der Standard
               </a>
             </Button>
           </div>
@@ -102,7 +108,7 @@ export const Hero = () => {
           <img
             src="/hero.webp"
             alt="hero"
-            className="w-full rounded-2xl object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
+            className="w-full rounded-sm object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
           />
         </div>
       </div>

@@ -1,38 +1,29 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Mainline - Modern Astro Template";
+export const SITE_TITLE = "pruefportal.ai - KI-Systeme nach dem MISSION KI Qualitätsstandard prüfen";
 export const SITE_DESCRIPTION =
-  "A modern, fully featured Astro template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.";
+  "pruefportal.ai - KI-Systeme nach dem MISSION KI Qualitätsstandard prüfen.";
 
 export const GITHUB_URL =
-  "https://github.com/shadcnblocks/mainline-astro-template";
+  "https://github.com/mission-KI/pruefportal-app";
 
 export const SITE_METADATA = {
   title: {
-    default: "Mainline - Modern Astro Template",
-    template: "%s | Mainline",
+    default: "pruefportal.ai - KI-Systeme nach dem MISSION KI Qualitätsstandard prüfen",
+    template: "%s | Prüfportal",
   },
   description:
-    "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+    "Web-App für die Prüfung von KI-Systemen nach dem MISSION KI Qualitätsstandard.",
   keywords: [
-    "Astro",
-    "astro template",
-    "astro theme",
-    "astro starter",
-    "shadcn template",
-    "shadcn theme",
-    "shadcn starter",
-    "tailwind template",
-    "tailwind theme",
-    "tailwind starter",
-    "mdx template",
-    "mdx theme",
-    "mdx starter",
+    "MISSION KI",
+    "KI-Qualität",
+    "KI-Prüfung",
+    "Qualitätsstandard"
   ],
-  authors: [{ name: "shadcnblocks.com" }],
-  creator: "shadcnblocks.com",
-  publisher: "shadcnblocks.com",
+  authors: [{ name: "github.com/phihes" }],
+  creator: "github.com/phihes",
+  publisher: "github.com/phihes",
   robots: {
     index: true,
     follow: true,
@@ -49,24 +40,24 @@ export const SITE_METADATA = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Mainline - Modern Astro Template",
+    title: "pruefportal.ai - KI-Systeme nach dem MISSION KI Qualitätsstandard prüfen",
     description:
-      "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
-    siteName: "Mainline",
+      "pruefportal.ai - KI-Systeme nach dem MISSION KI Qualitätsstandard prüfen.",
+    siteName: "pruefportal.ai",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mainline - Modern Astro Template",
+        alt: "pruefportal.ai - KI-Systeme nach dem MISSION KI Qualitätsstandard prüfen",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mainline - Modern Astro Template",
+    title: "pruefportal.ai - KI-Systeme nach dem MISSION KI Qualitätsstandard prüfen",
     description:
-      "A modern Astro template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+      "pruefportal.ai - KI-Systeme nach dem MISSION KI Qualitätsstandard prüfen.",
     images: ["/og-image.jpg"],
     creator: "@ausrobdev",
   },
