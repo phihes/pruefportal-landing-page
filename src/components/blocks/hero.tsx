@@ -8,7 +8,8 @@ import {
   ListChecks,
   Sparkles,
   RulerDimensionLine,
-  PocketKnife
+  PocketKnife,
+  Github
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
@@ -27,26 +28,26 @@ const features = [
     description: "Lassen Sie sich durch die Prüfung führen und das Ergebnis automatisch berechnen.",
     icon: ListChecks,
   },   
-  {
+  /*{
     title: "Vielfältig anwendbar",
     description: "Anwendbar auf verschiedene Arten von Modellen, sowie Hoch- und Niedrigrisiko-KI.",
     icon: PocketKnife,
-  },  
+  }*/,  
   {
     title: "Kollaborativ",
-    description: "Lassen Sie sich einfach durch weitere Experten bei der Prüfung unterstützen.",
+    description: "Prüfen Sie gemeinsam mit KollegInnen und weiteren ExpertInnen.",
     icon: Blend,
   },
 ];
 
 export const Hero = () => {
   return (
-    <section className="py-28 lg:py-32 lg:pt-44">
+    <section className="pt-24 pb-12 lg:pb-24 lg:pt-36">
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
-          <h1 className="text-foreground font-extrabold tracking-normal max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
-            Prüfportal für KI <Badge variant="secondary">Beta-Version</Badge>
+          <h1 className="text-foreground font-extrabold max-w-160 text-3xl tracking-tight md:text-4xl lg:text-5xl xl:whitespace-nowrap">
+            Prüfportal für KI-Systeme <Badge variant="outline" className="tracking-normal">Beta</Badge>
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
@@ -54,14 +55,16 @@ export const Hero = () => {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
-            <Button asChild
+            <Button 
+              variant="secondary"
               className=""
+              asChild
             >
-              <a href="https://pruefportal.mission-ki.de/users/register"><Bot className="stroke-2 text-primary-foreground" />Jetzt kostenlos prüfen</a>
+              <a href="https://pruefportal.mission-ki.de/users/register"><Bot className="stroke-2" />Kostenlos prüfen</a>
             </Button>
             <Button
               variant="outline"
-              className="from-background h-auto gap-2 bg-linear-to-r to-transparent"
+              className="h-auto gap-2"
               asChild
             >
               <a
@@ -71,6 +74,18 @@ export const Hero = () => {
                 Der Standard
               </a>
             </Button>
+            <Button
+              variant="outline"
+              className="fh-auto gap-2"
+              asChild
+            >
+              <a
+                href="https://github.com/Mission-KI/pruefportal-app"
+                className="max-w-56 truncate text-start md:max-w-none"
+              >
+                <Github className="stroke-2" />Github
+              </a>
+            </Button>            
           </div>
         </div>
 
@@ -103,8 +118,8 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
-        <div className="relative h-[793px] w-full">
+      <div className="mt-12 mx-6 mb-0">
+        <div className="relative w-full">
           <img
             src="/hero.webp"
             alt="hero"

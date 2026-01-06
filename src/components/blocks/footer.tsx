@@ -5,33 +5,30 @@ import { GITHUB_URL } from "@/consts";
 
 export function Footer() {
   const navigation = [
-    { name: "Product", href: "/#feature-modern-teams" },
-    { name: "About Us", href: "/about" },
-    { name: "Pricing", href: "/pricing" },
+    { name: "Prüfportal", href: "/" },
     { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "/contact" },
+    { name: "Impressum", href: "/imprint" },
+    { name: "Datenschutzerklärung", href: "/privacy" }
   ];
 
-  const social = [
-    { name: "Xwitter", href: "https://x.com/ausrobdev" },
-    { name: "LinkedIn", href: "#" },
-  ];
+  const social = [];
 
-  const legal = [{ name: "Privacy Policy", href: "/privacy" }];
+  const legal = [
+
+  ];
 
   return (
-    <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32">
+    <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32 pb-6 lg:pb-12">
       <div className="container space-y-3 text-center">
         <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-          Start your free trial today
+          Jetzt kostenlos prüfen
         </h2>
         <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
-          Mainline is the fit-for-purpose tool for planning and building modern
-          software products.
+          Bewerten Sie die Qualität Ihres KI-Systems<br />nach dem MISSION KI Standard.
         </p>
         <div>
-          <Button size="lg" className="mt-4" asChild>
-            <a href={GITHUB_URL}>Get template</a>
+          <Button size="lg" className="mt-4" variant="secondary" asChild>
+            <a href="https://pruefportal.mission-ki.de/users/register">Hier registrieren</a>
           </Button>
         </div>
       </div>
@@ -59,7 +56,7 @@ export function Footer() {
             </li>
           ))}
         </ul>
-        <ul className="flex flex-wrap items-center justify-center gap-6">
+        {legal && <ul className="flex flex-wrap items-center justify-center gap-6">
           {legal.map((item) => (
             <li key={item.name}>
               <a
@@ -70,7 +67,7 @@ export function Footer() {
               </a>
             </li>
           ))}
-        </ul>
+        </ul>}
       </nav>
     </footer>
   );

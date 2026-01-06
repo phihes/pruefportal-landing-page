@@ -30,30 +30,33 @@ export const Features = () => {
         </div>
 
         {/* Content */}
-        <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
-          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Vereinfachte<br />Prüfung
+        <div className="mx-auto mt-10 grid max-w-4xl items-center gap-6 md:gap-0 lg:mt-24 lg:grid-cols-2">
+          <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl lg:pr-6">
+            Vereinfachte Prüfung
           </h2>
           <p className="text-muted-foreground leading-snug">
-            Das Prüfportal vereinacht die Anwendung des MISSION KI Qualitätsstandard.
+            Das Prüfportal vereinfacht die Anwendung des MISSION KI Qualitätsstandard.
             Lassen Sie sich Schritt für Schritt durch die Prüfung führen und automatisch ein Ergebnis generieren.
 
           </p>
         </div>
 
         {/* Features Card */}
-        <Card className="mt-8 rounded-3xl md:mt-12 lg:mt-20">
+        <Card className="bg-background/40 mt-8 rounded-lg md:mt-12 lg:mt-20 border-none">
           <CardContent className="flex p-0 max-md:flex-col">
             {items.map((item, i) => (
+
               <div key={i} className="flex flex-1 max-md:flex-col">
+
                 <div className="flex-1 p-4 pe-0! md:p-6">
+
                   <div className="relative aspect-[1.28/1] overflow-hidden">
                     <img
                       src={item.image}
                       alt={`${item.title} interface`}
-                      className="object-cover object-left-top ps-4 pt-2"
+                      className="object-cover object-left-top ps-0 pt-2"
                     />
-                    <div className="from-background absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
+                    <div className="from-background/40 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent" />
                   </div>
 
                   <a

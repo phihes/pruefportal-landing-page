@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { ChevronRight, Github } from "lucide-react";
+import { ChevronRight, Github, ExternalLink, LogIn } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -33,10 +33,11 @@ const ITEMS = [
       },
     ],
   },
-  { label: "About Us", href: "/about" },
   //{ label: "Pricing", href: "/pricing" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Dokumentation", href: "https://docs.pruefportal.mission-ki.de/", external: true },
+  { label: "Github", href: "https://github.com/mission-ki/pruefportal-app", external: true },    
+  //{ label: "Kontakt", href: "/contact" },
 ];
 
 export const Navbar = () => {
@@ -51,11 +52,14 @@ export const Navbar = () => {
   return (
     <section
       className={cn(
-        "bg-background/70 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-4xl border backdrop-blur-md transition-all duration-300",
-        "top-5 lg:top-12",
+        //"bg-background/50 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-lg border border-background backdrop-blur-md transition-all duration-300 shadow-sm",
+        //"top-5 lg:top-12",
+        "bg-background/50 absolute m-0 left-0 w-[100%] z-50 rounded-none border border-background backdrop-blur-none transition-all duration-300 shadow-sm lg:px-4",
+        "top-0",
+
       )}
     >
-      <div className="flex items-center justify-between px-6 py-3">
+      <div className="flex items-center justify-between px-6 py-1.5">
         {/* <a href="/" className="flex shrink-0 items-center gap-2">
           <img
             src="/logo.svg"
@@ -65,8 +69,8 @@ export const Navbar = () => {
             className="dark:invert"
           />
         </a> */}
-        <a href="/" className="flex shrink-0 items-center gap-2 font-bold font-stretch-semi-condensed text-sm text-primary-foreground">
-          <span>pruefportal.ai</span>
+        <a href="/" className="flex shrink-0 items-center gap-2 font-bold font-stretch-semi-condensed text-normal text-foreground">
+          <span>Pruefportal.ai</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -104,12 +108,13 @@ export const Navbar = () => {
                 <NavigationMenuItem key={link.label} className="">
                   <a
                     href={link.href}
+                    target={link.external ? "_blank" : "_self"}
                     className={cn(
                       "relative bg-transparent px-1.5 text-sm font-medium transition-opacity hover:opacity-75",
                       pathname === link.href && "text-muted-foreground",
                     )}
                   >
-                    {link.label}
+                    <div className="flex px-1.5">{link.label}{link.icon ?? ""}</div>
                   </a>
                 </NavigationMenuItem>
               ),
@@ -119,12 +124,13 @@ export const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
-          {/* <ThemeToggle /> */}
+          {/* <ThemeToggle /> */}         
           <a href="https://pruefportal.mission-ki.de/users/login" className="max-lg:hidden">
             <Button variant="outline">
+              <LogIn className="stroke-2" />
               <span className="relative z-10">Anmelden</span>
             </Button>
-          </a>
+          </a>        
           {/*<a
             href={GITHUB_URL}
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -160,7 +166,7 @@ export const Navbar = () => {
       {/*  Mobile Menu Navigation */}
       <div
         className={cn(
-          "bg-background fixed inset-x-0 top-[calc(100%+1rem)] flex flex-col rounded-2xl border p-6 transition-all duration-300 ease-in-out lg:hidden",
+          "bg-background/97 border-background backdrop-blur-md fixed inset-x-0 top-[calc(100%+1rem)] flex flex-col rounded-md border p-6 transition-all duration-300 ease-in-out lg:hidden",
           isMenuOpen
             ? "visible translate-y-0 opacity-100"
             : "invisible -translate-y-4 opacity-0",

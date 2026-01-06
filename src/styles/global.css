@@ -6,6 +6,62 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
+  font-family: "Zalando";
+  src: url("/fonts/z-sans/ZalandoSans-variable.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zalando";
+  src: url("/fonts/z-sans/ZalandoSans-variable.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zalando";
+  src: url("/fonts/z-sans/ZalandoSans-variable.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zalando";
+  src: url("/fonts/z-sans/ZalandoSans-variable.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zalando";
+  src: url("/fonts/z-sans/ZalandoSans-variable.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("/fonts/nimbus-sans-l/nimbus-sans-l_regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("/fonts/nimbus-sans-l/nimbus-sans-l_bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "DM Sans";
   src: url("/fonts/dm-sans/DMSans-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -46,19 +102,19 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(85.582% 0.0587 302.884);
-  --primary-foreground: oklch(23.054% 0.11618 292.498);
-  --secondary: oklch(0.97 0 0);
+  --background: oklch(0.1707 0.0932 289.63);
+  --foreground: oklch(1 0 0);
+  --card: var(--background);
+  --card-foreground: oklch(1 0 0);
+  --popover: var(--background);
+  --popover-foreground: oklch(0.95 0 0);
+  --primary: oklch(0.323 0.1764 292.08);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(1 0 0);
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(97.015% 0.00011 271.152);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --muted: oklch(27.769% 0.0861 306.105);
+  --muted-foreground: oklch(87.627% 0.06606 304.755);
+  --accent: oklch(0.9402 0.1905 107.3);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
@@ -80,7 +136,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --radius: 20px;
+  --radius: 15px;
 
   --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
@@ -97,9 +153,11 @@
 
   --font-dm-sans: "DM Sans", sans-serif;
   --font-inter: "inter", sans-serif;
+  --font-nimbus: "Nimbus Sans L", sans-serif;
+  --font-zalando: "Zalando", sans-serif;
 
   --font-sans:
-    /*var(--font-dm-sans), */var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    var(--font-zalando), ui-sans-serif, system-ui, sans-serif;
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
@@ -107,7 +165,7 @@
 
   /* StyleGlide provides a better abstraction for fonts */
   --display-family: var(--font-sans);
-  --text-family: var(--font-inter);
+  --text-family: var(--font-zalando);
   --display-weight: 600;
   --text-weight: 400;
 }
