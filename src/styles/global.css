@@ -6,100 +6,13 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: "Zalando";
+  font-family: "Zalando Sans";
   src: url("/fonts/z-sans/ZalandoSans-variable.ttf") format("truetype");
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Zalando";
-  src: url("/fonts/z-sans/ZalandoSans-variable.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Zalando";
-  src: url("/fonts/z-sans/ZalandoSans-variable.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Zalando";
-  src: url("/fonts/z-sans/ZalandoSans-variable.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Zalando";
-  src: url("/fonts/z-sans/ZalandoSans-variable.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Nimbus Sans L";
-  src: url("/fonts/nimbus-sans-l/nimbus-sans-l_regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Nimbus Sans L";
-  src: url("/fonts/nimbus-sans-l/nimbus-sans-l_bold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src: url("/fonts/dm-sans/DMSans-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src: url("/fonts/dm-sans/DMSans-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src: url("/fonts/dm-sans/DMSans-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src: url("/fonts/dm-sans/DMSans-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/inter/inter.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
 
 :root {
   --background: oklch(0.1707 0.0932 289.63);
@@ -151,10 +64,7 @@
     0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
 
-  --font-dm-sans: "DM Sans", sans-serif;
-  --font-inter: "inter", sans-serif;
-  --font-nimbus: "Nimbus Sans L", sans-serif;
-  --font-zalando: "Zalando", sans-serif;
+  --font-zalando: "Zalando Sans", sans-serif;
 
   --font-sans:
     var(--font-zalando), ui-sans-serif, system-ui, sans-serif;
@@ -315,6 +225,7 @@
   .font-display {
     font-family: var(--font-display);
     font-weight: var(--display-weight);
+    /*
     -webkit-font-feature-settings:
       "ss02" on,
       "ss03" on,
@@ -330,7 +241,8 @@
     font-feature-settings:
       "ss02" on,
       "ss03" on,
-      "ss04" on; /* Enables the special `a` character and other characters for DM Sans */
+      "ss04" on; Enables the special `a` character and other characters for DM Sans 
+      */
   }
   .font-mono {
     font-family: var(--font-mono), monospace;
