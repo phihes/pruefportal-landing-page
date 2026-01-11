@@ -12,6 +12,76 @@ import {
   Github
 } from "lucide-react";
 
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+const items = [
+  {
+    quote: "We're misusing Mainline as a CRM and it still works!",
+    author: "Amy Chase",
+    role: "PM",
+    company: "Mercury Finance",
+    image: "/testimonials/amy-chase.webp",
+  },
+  {
+    quote: "I was able to replace 80% of my team with Mainline bots.",
+    author: "Jonas Kotara",
+    role: "Lead Engineer",
+    company: "Mercury Finance",
+    image: "/testimonials/jonas-kotara.webp",
+  },
+  {
+    quote: "Founder Mode is hard enough without having a really nice PM app.",
+    author: "Kevin Yam",
+    role: "Founder",
+    company: "Mercury Finance",
+    image: "/testimonials/kevin-yam.webp",
+  },
+  {
+    quote: "I can use the tool as a substitute from my PM.",
+    author: "Kundo Marta",
+    role: "Founder",
+    company: "Mercury Finance",
+    image: "/testimonials/kundo-marta.webp",
+  },
+  {
+    quote: "We're misusing Mainline as a CRM and it still works!",
+    author: "Amy Chase",
+    role: "PM",
+    company: "Mercury Finance",
+    image: "/testimonials/amy-chase.webp",
+  },
+  {
+    quote: "I was able to replace 80% of my team with Mainline bots.",
+    author: "Jonas Kotara",
+    role: "Lead Engineer",
+    company: "Mercury Finance",
+    image: "/testimonials/jonas-kotara.webp",
+  },
+  {
+    quote: "Founder Mode is hard enough without having a really nice PM app.",
+    author: "Kevin Yam",
+    role: "Founder",
+    company: "Mercury Finance",
+    image: "/testimonials/kevin-yam.webp",
+  },
+  {
+    quote: "I can use the tool as a substitute from my PM.",
+    author: "Kundo Marta",
+    role: "Founder",
+    company: "Mercury Finance",
+    image: "/testimonials/kundo-marta.webp",
+  },
+];
+
+import { cn } from "@/lib/utils";
+
+
 import { DashedLine } from "@/components/dashed-line";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -42,7 +112,7 @@ const features = [
 
 export const Hero = () => {
   return (
-    <section className="pt-24 pb-12 lg:pb-24 lg:pt-36">
+    <section className="pt-24 lg:pt-36  pb-8 lg:pb-12">
       <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20">
         {/* Left side - Main content */}
         <div className="flex-1">
@@ -118,6 +188,7 @@ export const Hero = () => {
         </div>
       </div>
 
+      {/*
       <div className="mt-12 mx-6 mb-0">
         <div className="relative w-full">
           <img
@@ -126,7 +197,7 @@ export const Hero = () => {
             className="w-full rounded-sm object-cover object-left-top shadow-lg max-lg:rounded-tr-none"
           />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
