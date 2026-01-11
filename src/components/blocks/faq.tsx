@@ -8,55 +8,40 @@ import { cn } from "@/lib/utils";
 
 const categories = [
   {
-    title: "Support",
+    title: "Prüfportal & Qualitätsstandard",
     questions: [
       {
-        question: "How do I update my account without breaking my laptop?",
+        question: "Ist die Nutzung des Prüfportals kostenlos?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Ja.",
       },
       {
-        question: "Is support free, or do I need to Google everything?",
+        question: "Kann die Prüfung selbstständig durchgeführt werden?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
+          "Ja. Der Standard und das Prüfportal dienen als Grundlage für Selbstprüfungen ihrer KI-Systeme und können optional durch eine Validierung externer Prüfstellen ergänzt werden.",
+      },  
+      {
+        question: "Welcher zeitliche Aufwand ist für die Durchführung einer Prüfung zu kalkulieren?",
+        answer:
+          "Der zeitliche Aufwand für eine Prüfung liegt typischerweise zwischen vier und acht Arbeitstagen. Die konkrete Dauer hängt von mehreren Faktoren ab. Vorhandene Dokumentation: Organisationen mit etablierten Qualitätsmanagement-Prozessen und bestehender technischer Dokumentation können auf vorhandene Unterlagen zurückgreifen und reduzieren damit den Aufwand erheblich. Systemkomplexität: Art und Umfang des KI-Systems sowie die Anzahl der relevanten Qualitätsdimensionen beeinflussen die Prüfdauer. Verfügbare Evidenzen: Bereits durchgeführte Tests, vorhandene Metriken und bestehende Risikoanalysen beschleunigen den Prozess. Teamverfügbarkeit: Die zeitnahe Verfügbarkeit der relevanten Ansprechpartner und Experten aus Entwicklung und Betrieb wirkt sich direkt auf die Durchlaufzeit aus. Bei gut vorbereiteten Organisationen mit strukturierten Prozessen tendiert der Aufwand zum unteren Ende der Spanne, während Erstprüfungen ohne etablierte Dokumentationsstrukturen entsprechend mehr Zeit erfordern. Mithilfe des Prüfportals können Sie den Aufwand verringern.",
+      },          
+      {
+        question: "Wie werden meine Daten im MISSION KI Prüfportal geschützt?",
+        answer:
+          "Das MISSION KI Prüfportal wurde so konzipiert, dass die Abfrage sensitiver Daten vermieden wird. Die technische Prüfung Ihres KI-Systems findet in Ihrer eigenen Systemumgebung statt. Dokumentierte Evidenzen und Prüfergebnisse verbleiben unter Ihrer Kontrolle und sind nur durch Prozessbeteiligte einsehbar. Das Portal dient als strukturierendes Werkzeug und speichert nur die für die Prüfungsdurchführung notwendigen Daten.",
       },
       {
-        question: "Are you going to be subsumed by AI?",
+        question: "Wer hat Zugriff auf meine Daten während der Prüfung?",
         answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
+          "Bei einer Selbstprüfung haben ausschließlich die von Ihnen benannten und berechtigten Personen Zugriff auf die Prüfdaten. Je nach gewählter Prüftiefe können dies Personen aus dem verantwortlichen Team, unabhängige interne Prüfer oder – bei freiwilliger externer Validierung – akkreditierte Prüfstellen sein. Die Zugriffsrechte werden von Ihnen selbst gesteuert und dokumentiert.",
+      },  
+      {
+        question: "Ist das Prüfportal open source?",
+        answer:
+          "Ja, das Prüfportal wurde als open source veröffentlicht. Sie können die Anwendung selbst betreiben (z.B. in Ihrem Intranet), nach Ihren Wünschen anpassen, sowie öffentliche Änderungen vorschlagen.",
+      },           
     ],
-  },
-  {
-    title: "Your account",
-    questions: [
-      {
-        question: "Is support free, or do I need to Google everything?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-      {
-        question: "Are you going to be subsumed by AI?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-    ],
-  },
-  {
-    title: "Other questions",
-    questions: [
-      {
-        question: "Is support free, or do I need to Google everything?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-      {
-        question: "Are you going to be subsumed by AI?",
-        answer:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates deserunt officia temporibus dignissimos.",
-      },
-    ],
-  },
+  }
 ];
 
 export const FAQ = ({
@@ -75,20 +60,13 @@ export const FAQ = ({
           <div className="space-y-4">
             {headerTag === "h1" ? (
               <h1 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                Got Questions?
+                Fragen &<br />Antworten
               </h1>
             ) : (
               <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-                Got Questions?
+                Fragen &<br />Antworten
               </h2>
             )}
-            <p className="text-muted-foreground max-w-md leading-snug lg:mx-auto">
-              If you can't find what you're looking for,{" "}
-              <a href="/contact" className="underline underline-offset-4">
-                get in touch
-              </a>
-              .
-            </p>
           </div>
 
           <div className="grid gap-6 text-start">
