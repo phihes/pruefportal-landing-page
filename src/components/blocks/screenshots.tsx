@@ -11,10 +11,16 @@ import { cn } from "@/lib/utils";
 
 const items = [
   {
-    image: "/hero.webp",
+    image: "/screenshots/dashboard.webp",
+  },   
+  {
+    image: "/screenshots/vcio.webp",
   },
   {
-    image: "/hero.webp",
+    image: "/screenshots/metrics.webp",
+  },
+  {
+    image: "/screenshots/indicators.webp",
   }
 ];
 
