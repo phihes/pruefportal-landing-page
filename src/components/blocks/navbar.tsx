@@ -45,7 +45,7 @@ export const Navbar = () => {
       className={cn(
         //"bg-background/50 absolute left-1/2 z-50 w-[min(90%,700px)] -translate-x-1/2 rounded-lg border border-background backdrop-blur-md transition-all duration-300 shadow-sm",
         //"top-5 lg:top-12",
-        "bg-background/50 absolute m-0 left-0 w-[100%] z-50 rounded-none border border-background backdrop-blur-none transition-all duration-300 shadow-sm lg:px-4",
+        "bg-background/60 absolute m-0 left-0 w-[100%] z-50 rounded-t-xl border border-background backdrop-blur-none transition-all duration-300 shadow-sm lg:px-4",
         "top-0",
 
       )}
@@ -113,9 +113,7 @@ export const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Auth Buttons */}
-        <div className="flex items-center gap-2.5">
-          {/* <ThemeToggle /> */}         
+        <div className="flex items-center gap-2.5">    
           <a href="https://pruefportal.mission-ki.de/users/login" className="max-lg:hidden">
             <Button variant="outline">
               <LogIn className="stroke-2" />
@@ -157,10 +155,10 @@ export const Navbar = () => {
       {/*  Mobile Menu Navigation */}
       <div
         className={cn(
-          "bg-background/97 border-background backdrop-blur-md fixed inset-x-0 top-[calc(100%+1rem)] flex flex-col rounded-md border p-6 transition-all duration-300 ease-in-out lg:hidden",
+          "bg-transparent border-background backdrop-blur-xl relative inset-x-0 top- 0 flex flex-col p-6 mx-2.5 transition-all duration-300 ease-in-out lg:hidden",
           isMenuOpen
-            ? "visible translate-y-0 opacity-100"
-            : "invisible -translate-y-4 opacity-0",
+            ? "relative translate-y-0 opacity-100 visible"
+            : "absolute -translate-y-4 opacity-0 invisible",
         )}
       >
         <nav className="divide-border flex flex-1 flex-col divide-y">
@@ -230,6 +228,10 @@ export const Navbar = () => {
               </a>
             ),
           )}
+          <a href="https://pruefportal.mission-ki.de/users/login" className ="flex text-foreground hover:text-foreground/80 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0" onClick={() => setIsMenuOpen(false)}>
+              <LogIn className="stroke-2 mr-1" />
+              <span className="relative z-10">Anmelden</span>
+          </a>   
         </nav>
       </div>
     </section>
