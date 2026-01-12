@@ -17,9 +17,13 @@ import { cn } from "@/lib/utils";
 
 const ITEMS = [
   {
-    label: "Das Prüfportal",
+    label: "Prüfportal",
     href: "/"
   },
+  {
+    label: "Standard",
+    href: "/#standard"
+  },  
   //{ label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/#faq" },
   { label: "Dokumentation", href: "https://docs.pruefportal.mission-ki.de/", external: true },
