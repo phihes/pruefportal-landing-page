@@ -5,7 +5,7 @@ import { Background } from '@/components/background';
 import { FAQ } from '@/components/blocks/faq';
 import { Features } from '@/components/blocks/features';
 import { Hero } from '@/components/blocks/hero';
-import { Logos } from '@/components/blocks/logos';
+import { Standard } from '@/components/blocks/standard';
 import { Pricing } from '@/components/blocks/pricing';
 import { Screenshots } from '@/components/blocks/screenshots';
 import { ResourceAllocation } from '@/components/blocks/resource-allocation';
@@ -21,7 +21,7 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro';
   <Background className="via-muted to-muted/80">
     <Hero />
     <Screenshots client:only='react'/>
-    <Logos client:only="react"/> 
+    <Standard client:only="react"/> 
     <Features />
   </Background>
   <Background variant="bottom">

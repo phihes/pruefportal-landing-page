@@ -18,12 +18,12 @@ const categories = [
       {
         question: "Kann die Prüfung selbstständig durchgeführt werden?",
         answer:
-          "Ja. Der Standard und das Prüfportal dienen als Grundlage für Selbstprüfungen ihrer KI-Systeme und können optional durch eine Validierung externer Prüfstellen ergänzt werden.",
+          "Ja. Der Standard und das Prüfportal dienen als Grundlage für Selbstprüfungen Ihrer KI-Systeme und können optional durch eine Validierung externer Prüfstellen ergänzt werden.",
       },  
       {
         question: "Welcher zeitliche Aufwand ist für die Durchführung einer Prüfung zu kalkulieren?",
         answer:
-          "Der zeitliche Aufwand für eine Prüfung liegt typischerweise zwischen vier und acht Arbeitstagen. Die konkrete Dauer hängt von mehreren Faktoren ab. Vorhandene Dokumentation: Organisationen mit etablierten Qualitätsmanagement-Prozessen und bestehender technischer Dokumentation können auf vorhandene Unterlagen zurückgreifen und reduzieren damit den Aufwand erheblich. Systemkomplexität: Art und Umfang des KI-Systems sowie die Anzahl der relevanten Qualitätsdimensionen beeinflussen die Prüfdauer. Verfügbare Evidenzen: Bereits durchgeführte Tests, vorhandene Metriken und bestehende Risikoanalysen beschleunigen den Prozess. Teamverfügbarkeit: Die zeitnahe Verfügbarkeit der relevanten Ansprechpartner und Experten aus Entwicklung und Betrieb wirkt sich direkt auf die Durchlaufzeit aus. Bei gut vorbereiteten Organisationen mit strukturierten Prozessen tendiert der Aufwand zum unteren Ende der Spanne, während Erstprüfungen ohne etablierte Dokumentationsstrukturen entsprechend mehr Zeit erfordern. Mithilfe des Prüfportals können Sie den Aufwand verringern.",
+          "Der zeitliche Aufwand für eine Prüfung liegt typischerweise zwischen vier und acht Arbeitstagen. Die konkrete Dauer hängt von mehreren Faktoren ab. Vorhandene Dokumentation: Organisationen mit etablierten Qualitätsmanagement-Prozessen und bestehender technischer Dokumentation können auf vorhandene Unterlagen zurückgreifen und reduzieren damit den Aufwand erheblich. Systemkomplexität und Anwendungskontext: Art und Umfang des KI-Systems sowie der Anwendungskontext und die resultierende Anzahl der relevanten Qualitätsdimensionen beeinflussen die Prüfdauer. Verfügbare Evidenzen: Bereits durchgeführte Tests, vorhandene Metriken und bestehende Risikoanalysen beschleunigen den Prozess. Teamverfügbarkeit: Die zeitnahe Verfügbarkeit der relevanten Ansprechpartner und Experten aus Entwicklung und Betrieb wirkt sich direkt auf die Durchlaufzeit aus. Bei gut vorbereiteten Organisationen mit strukturierten Prozessen tendiert der Aufwand zum unteren Ende der Spanne, während Erstprüfungen ohne etablierte Dokumentationsstrukturen entsprechend mehr Zeit erfordern. Mithilfe des Prüfportals können Sie den Aufwand verringern.",
       },          
       {
         question: "Wie werden meine Daten im MISSION KI Prüfportal geschützt?",
@@ -39,9 +39,12 @@ const categories = [
         question: "Ist das Prüfportal open source?",
         answer:
           "Ja, das Prüfportal wurde als open source veröffentlicht. Sie können die Anwendung selbst betreiben (z.B. in Ihrem Intranet), nach Ihren Wünschen anpassen, sowie öffentliche Änderungen vorschlagen.",
-      },           
-    ],
-  }
+      },
+      {
+        question: "Wie lange wird das Prüfportal im Rahmen der Initiative MISSION KI zentral betrieben?",
+        answer: "Die Initiative MISSION KI endete zum 31.12.2025. Der öffentliche Betrieb des Prüfportals über die Initiative ist derzeit bis einschließlich 31.03.2026 sichergestellt. Ob der Betrieb darüber hinaus fortgeführt werden kann, wird geprüft, kann aktuell jedoch nicht zugesichert werden. Unabhängig davon stehen das Prüfportal (zum Selbstbetrieb) sowie der Qualitätsstandard auch nach dem 31.03.2026 weiterhin kostenfrei über GitHub zur Verfügung."
+      }
+    ]}
 ];
 
 export const FAQ = ({
