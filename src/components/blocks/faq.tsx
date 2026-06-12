@@ -42,7 +42,7 @@ const categories = [
       },
       {
         question: "Wie lange wird das Prüfportal im Rahmen der Initiative MISSION KI zentral betrieben?",
-        answer: "Die Initiative MISSION KI endete zum 31.12.2025. Der öffentliche Betrieb des Prüfportals über die Initiative ist derzeit bis einschließlich 31.03.2026 sichergestellt. Ob der Betrieb darüber hinaus fortgeführt werden kann, wird geprüft, kann aktuell jedoch nicht zugesichert werden. Unabhängig davon stehen das Prüfportal (zum Selbstbetrieb) sowie der Qualitätsstandard auch nach dem 31.03.2026 weiterhin kostenfrei über GitHub zur Verfügung."
+        answer: "Die Initiative MISSION KI endete zum 31.12.2025. Der öffentliche Betrieb des Prüfportals über die Initiative wurde bis einschließlich 31.03.2026 sichergestellt. Unabhängig davon stehen das Prüfportal (zum Selbstbetrieb) sowie der Qualitätsstandard auch nach dem 31.03.2026 weiterhin kostenfrei über GitHub zur Verfügung."
       }
     ]}
 ];

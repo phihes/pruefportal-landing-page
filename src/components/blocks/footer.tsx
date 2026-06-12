@@ -26,9 +26,9 @@ export function Footer() {
         <p className="text-muted-foreground mx-auto max-w-xl leading-snug text-balance">
           Bewerten Sie die Qualität Ihres KI-Systems<br />nach dem MISSION KI Standard.
         </p>
-        <div>
-          <Button size="lg" className="mt-4" variant="secondary" asChild>
-            <a href="https://pruefportal.mission-ki.de/users/register">Hier registrieren</a>
+        <div className="inline-block cursor-not-allowed">
+          <Button size="lg" className="mt-4" variant="secondary" disabled aria-disabled>
+            Hier registrieren
           </Button>
         </div>
       </div>

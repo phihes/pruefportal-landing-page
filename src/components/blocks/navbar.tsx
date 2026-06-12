@@ -26,7 +26,7 @@ const ITEMS = [
   },  
   //{ label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Dokumentation", href: "https://docs.pruefportal.mission-ki.de/", external: true },
+  //{ label: "Dokumentation", href: "https://docs.pruefportal.mission-ki.de/", external: true },
   { label: "Github", href: "https://github.com/mission-ki/pruefportal-app", external: true },    
   //{ label: "Kontakt", href: "/contact" },
 ];
@@ -114,12 +114,14 @@ export const Navbar = () => {
         </NavigationMenu>
 
         <div className="flex items-center gap-2.5">    
-          <a href="https://pruefportal.mission-ki.de/users/login" className="max-lg:hidden">
-            <Button variant="outline">
+          {/* <a href="#" className="max-lg:hidden" aria-disabled> */}
+          <div className="max-lg:hidden inline-block cursor-not-allowed">
+            <Button variant="outline" disabled aria-disabled>
               <LogIn className="stroke-2" />
               <span className="relative z-10">Anmelden</span>
             </Button>
-          </a>        
+          </div>
+          {/* </a> */}
           {/*<a
             href={GITHUB_URL}
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -228,10 +230,10 @@ export const Navbar = () => {
               </a>
             ),
           )}
-          <a href="https://pruefportal.mission-ki.de/users/login" className ="flex text-foreground hover:text-foreground/80 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0" onClick={() => setIsMenuOpen(false)}>
+          {/*<a href="https://pruefportal.mission-ki.de/users/login" className ="flex text-foreground hover:text-foreground/80 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0" onClick={() => setIsMenuOpen(false)}>
               <LogIn className="stroke-2 mr-1" />
               <span className="relative z-10">Anmelden</span>
-          </a>   
+          </a> */}
         </nav>
       </div>
     </section>

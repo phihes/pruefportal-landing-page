@@ -9,7 +9,10 @@ import {
   Sparkles,
   RulerDimensionLine,
   PocketKnife,
-  Github
+  Github,
+  CheckCircle2Icon,
+  InfoIcon,
+  HeartCrack
 } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,6 +23,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
+} from "@/components/ui/alert";
 const items = [
   {
     quote: "We're misusing Mainline as a CRM and it still works!",
@@ -121,17 +129,29 @@ export const Hero = () => {
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Prüfen Sie die Qualität Ihres KI-Systems einfach nach dem <a href="https://mission-ki.de/de/pruefstandards" className="" target="_blank">MISSION KI Standard</a>
+            Prüfen Sie die Qualität Ihres KI-Systems einfach nach dem MISSION KI Standard
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
+          <div className="mt-5 mb-0">
+            <Alert className="border-accent bg-muted text-accent">
+              <HeartCrack />
+              <AlertTitle>Offline</AlertTitle>
+              <AlertDescription>
+                Das Prüfportal ist nach dem Abschluss des Projekts MISSION-KI aktuell leider offline. Der Standard und die Web-App sind kostenlos unter CC- und MIT-Lizenz verfügbar und können weiter selbständig für Prüfungen verwendet werden.
+              </AlertDescription>
+            </Alert>
+          </div>          
+
+          <div className="mt-4 flex flex-wrap items-center gap-4 lg:flex-nowrap">
+            <div className="inline-block cursor-not-allowed">
             <Button 
               variant="secondary"
-              className=""
-              asChild
+              disabled
+              aria-disabled
+              data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
             >
-              <a href="https://pruefportal.mission-ki.de/users/register"><Bot className="stroke-2" />Kostenlos prüfen</a>
-            </Button>
+              <span>Kostenlos prüfen</span>
+            </Button></div>
             <Button
               variant="outline"
               className="h-auto gap-2"
